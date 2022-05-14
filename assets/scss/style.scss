@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+// 詳細はguideline.txtに記載
+
+
+/*
+ * Library
+*/
+@import "lib/_mixin"; // mixinを記述
+@import "lib/_font"; // ウェブフォント等
+@import "lib/_setting"; // 各種設定
+
+/*
+ * Reset Style
+*/
+@import "normalize/_reset"; // リセットスタイル
+
+
+/*
+ * Base Style
+*/
+@import "_base"; // デフォルトスタイル及びセレクタそのものへのスタイル指定
+
+
+/*
+ * Layout Style
+*/
+@import "_layout";
+@import "_animation";
+@import "page/_top";
+@import "page/_common";
+//@import "page/_studio";
+//@import "page/_sound-make";
+@import "_common"; // どのサイトでも使用する汎用クラス（BEMの命名規則は適用しない）
+@import "_module"; // 再利用可能なパーツ（BEMの命名規則は適用しない）
+@import "_vend"; // 外部ライブラリ（bootstrap、jQueryプラグイン等）の上書きする場合

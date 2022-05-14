@@ -1,0 +1,418 @@
+/* Page */
+// ページごとのスタイルはここに記述
+
+.studioIntro{
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+	position: relative;
+	overflow: hidden;
+	@include media(tablet-up){
+		margin-bottom: 9rem;
+	}
+	&:before{
+		width: 100%;
+		position: absolute;
+		height: 100%;
+		right: 0;
+		transform: translateX(-70%);
+		background-color: #fff;
+		z-index: 100;
+		@include media(tablet-up){
+			content: "";
+		}
+	}
+	&__in{
+		@include media(tablet-up){
+			display: flex;
+		}
+	}
+
+	&__image{
+		display: none;
+		max-width: 352px;
+		width: 36%;
+		flex-shrink: 0;
+		margin-right: 5%;
+		transform: translateY(-4.5%);
+		position: relative;
+		z-index: 101;
+		@include media(tablet-up){
+			display: block;
+		}
+	}
+	&__con{
+		@include media(tablet-up){
+			width: 59%;
+		}
+	}
+	&__ttl{
+		font-size: 1.8rem;
+		font-weight: 600;
+		margin-bottom: 2rem;
+		@include media(tablet-up){
+			font-size: 2.3vw;
+		}
+		@include media(desktop-up){
+			font-size: 2.3rem;
+		}
+	}
+	p{
+		font-size: 1.5rem;
+		font-weight: 500;
+		line-height: 2;
+		margin-bottom: 3rem;
+		@include media(tablet-up){
+			font-size: 1.5vw;
+		}
+		@include media(desktop-up){
+			font-size: 1.5rem;
+		}
+	}
+
+	&__gallery{
+		&__ttl{
+			color: #CA4542;
+			font-weight: 500;
+			font-family: $font_jost;
+			font-size: 1.8rem;
+			margin-bottom: 2rem;
+			@include media(tablet-up){
+				font-size: 1.8vw;
+			}
+			@include media(desktop-up){
+				font-size: 1.8rem;
+			}
+		}
+		&__lst{
+			display: flex;
+			&:before{
+				width: 100%;
+				position: absolute;
+				height: 100%;
+				right: 0;
+				transform: translateX(-100%);
+				background-color: #fff;
+				z-index: 100;
+				@include media(tablet-up){
+					content: "";
+				}
+			}
+			.slick-slide{
+				width: 294px;
+				margin-right: 5rem;
+				@include media(tablet-up){
+					max-width: 240px;
+					margin-right: 3.4rem;
+				}
+			}
+			.slick-dots{
+				bottom: -20px;
+				height: 10px;
+				text-align: left;
+			}
+			.slick-dots li{
+				margin: 0 2px;
+				width: 10px;
+				height: 10px;
+				&:not(:last-child){
+					margin-right: 10px;
+				}
+			}
+			.slick-dots li button{
+				width: 10px;
+				height: 10px;
+				border: solid 1px #707070;
+				border-radius: 100%;
+				padding: 0;
+				&:before{
+					content: none;
+				}
+			}
+			.slick-active button{
+				background: #707070;
+			}
+		}
+
+		.slick-list{
+			overflow: visible;
+			width: 294px;
+			@include media(tablet-up){
+				width: 240px;
+			}
+		}
+	}
+}
+
+
+.studioTtl{
+	text-align: center;
+	span{
+		display: block;
+	}
+	.ja{
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: #CA4542;
+	}
+	.en{
+		font-size: 1.3rem;
+		font-weight: 500;
+		font-family: $font_jost;
+		color: #707070;
+		letter-spacing: .075em;
+	}
+}
+
+
+.studioPrice{
+	margin-bottom: 3rem;
+	&__in{
+		background: #F4F4F4;
+		padding: 3.5rem 8%;
+		text-align: center;
+	}
+	&__main{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 3.8rem;
+		font-family: $font_jost;
+		font-weight: 500;
+		letter-spacing: .075em;
+		margin-bottom: .4rem;
+		span{
+			font-size: 2.5rem;
+			position: relative;
+			top: 4px;
+		}
+	}
+	&__txt{
+		font-size: 1rem;
+		color: #707070;
+	}
+}
+
+
+.studioCasting{
+	margin-bottom: 8rem;
+	@include media(tablet-up){
+		margin-bottom: 10rem;
+	}
+	.studioTtl{
+		margin-bottom: 3rem;
+		.ja{
+			font-size: 2.3rem;
+		}
+		@include media(tablet-up){
+			margin-bottom: 1rem;
+		}
+	}
+	&__in{
+		background: #F4F4F4;
+		padding: 4rem 8% 6rem;
+		@include media(tablet-up){
+			padding: 3.5rem 8%;
+		}
+
+	}
+	p{
+		color: #707070;
+		text-align: center;
+		font-weight: 500;
+		line-height: 1.9;
+	}
+}
+
+
+.machine{
+	position: relative;
+	overflow: hidden;
+	@include media(tablet-up){
+		display: flex;
+		&:before, &:after{
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		&:before{
+			transform: translateX(-70%);
+			background: #CA4542;
+			right: 0;
+		}
+		&:after{
+			transform: translateX(70%);
+			background: #F4F4F4;
+			left: 0;
+		}
+	}
+	&__in{
+		position: relative;
+		@include media(tablet-up){
+			display: flex;
+			padding: 0 8%;
+		}
+		@include media(desktop-up){
+			padding: 0 2rem;
+		}
+	}
+	&__nav{
+		padding: 4rem 8% 2.5rem;
+		background: #CA4542;
+		flex-shrink: 0;
+		position: relative;
+		z-index: 15;
+		@include media(tablet-up){
+			width: 13.5%;
+			padding: 0;
+			padding: 7rem 0 0;
+		}
+		&__in{
+			@include media(tablet-up){
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		&, a{
+			color: #fff;
+		}
+		&__ttl{
+			margin-bottom: 2rem;
+			span{
+				display: block;
+				font-weight: 500;
+			}
+			.en{
+				font-size: 1.3rem;
+				font-family: $font_jost;
+			}
+			.ja{
+				font-size: 1.8rem;
+			}
+			@include media(tablet-up){
+				.en{
+					font-size: 1.3vw;
+				}
+				.ja{
+					font-size: 1.8vw;
+				}
+			}
+			@include media(desktop-up){
+				.en{
+					font-size: 1.3rem;
+				}
+				.ja{
+					font-size: 1.8rem;
+				}
+			}
+		}
+		ul{
+			display: flex;
+			li:not(:last-child){
+				margin-right: 2rem;
+			}
+			.current a{
+				text-decoration: underline;
+			}
+			@include media(tablet-up){
+				flex-direction: column;
+				align-items: flex-start;
+				li:not(:last-child){
+					margin: 0;
+					margin-bottom: 2rem;
+				}
+				a:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__main{
+		background: #F4F4F4;
+		padding: 5rem 0 7rem;
+		font-weight: 500;
+		position: relative;
+		z-index: 10;
+		width: 100%;
+		overflow: hidden;
+		@include media(tablet-up){
+			padding: 6.8rem 0 7rem;
+			width: 86.5%;
+		}
+		&__in{
+			padding: 0 8%;
+			@include media(tablet-up){
+				padding: 0;
+				padding-left: 7.5rem;
+			}
+		}
+	}
+
+	&__lst{
+		&__row{
+			display: none;
+			&.current{
+				display: block;
+			}
+			@include media(tablet-up){
+				//display: flex !important;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+		}
+		&__col{
+			@include media(tablet-up){
+				//width: 50%;
+			}
+			div{
+				@include media(tablet-up){
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+				}
+			}
+			ul{
+				@include media(tablet-up){
+					width: 48%;
+				}
+			}
+			li{
+				display: flex;
+				margin-left: 1em;
+				/*&:before{
+					content: "・";
+				}*/
+			}
+		}
+
+		p, li{
+			line-height: 1.9;
+		}
+
+		ul{
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__img{
+		margin-top: 3rem;
+		li:not(:last-child){
+			margin-bottom: 3rem;
+		}
+		@include media(phone-up){
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			li{
+				margin: 0;
+				width: 48%;
+			}
+			li:not(:last-child){
+				margin-bottom: 3rem;
+			}
+			li{
+				max-width: 350px;
+			}
+		}
+	}
+}

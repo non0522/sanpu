@@ -1,0 +1,107 @@
+/*
+ * Common
+ * どのサイトでも使用する汎用クラス（BEMの命名規則は適用しない）
+*/
+
+//$pd: 20 / 375 * 100%;
+//$pd: 5.33333%;
+$pd: 2rem;
+
+
+/* Width */
+
+// Set Width Default
+.w__set{
+	margin-left: auto;
+	margin-right: auto;
+	@include media(phone-up){
+		width: 85%;
+	}
+}
+.w__inset{
+	padding-left: $inSpace;
+    padding-right: $inSpace;
+	@include media(phone-up){
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.w__full{
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+}
+
+// Set Max Width
+.w__max__main{ max-width: 1088px; }
+.w__max__sub01{ max-width: 1000px; }
+.w__max__sub02{ max-width: 740px; }
+
+
+
+/* Breakpoint Change */
+.pc__hide{
+	@include media(desktop-up){
+		display: none;
+	}
+}
+.tab__hide{
+	@include media(desktop-down){
+		display: none;
+	}
+}
+.sp__hide{
+	@include media(tablet-down){
+		display: none;
+	}
+}
+
+/* Overflow */
+.of_h{ overflow: hidden; }
+
+/* SVG */
+.inc_svg{ display: none; }
+
+/* Text Align */
+.ta_c{ text-align: center; }
+.ta_r{ text-align: right; }
+.ta_l{ text-align: left; }
+
+
+/* Text Style */
+.fw_400{ font-weight: 400; }
+.fw_500{ font-weight: 500; }
+.fw_600{ font-weight: 600; }
+.fw_700{ font-weight: 700; }
+
+/* Responsive Image */
+.img__res{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+.w100{
+	width: 100%;
+}
+
+/* Roll Over */
+
+// 透過
+.highlight{
+	transition: opacity 300ms ease;
+	&:active{ opacity: .7; }
+	@include media(tablet-up){
+		&:hover{ opacity: .7; }
+	}
+}
+
+// 下線
+.underline:hover{ text-decoration: underline; }
+.underline-rev{
+	text-decoration: underline;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+

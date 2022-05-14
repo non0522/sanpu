@@ -1,0 +1,616 @@
+/* Page */
+// ページごとのスタイルはここに記述
+
+.soundMenu{
+	margin-top: 5rem;
+	&__lst{
+		li{
+			margin-bottom: 5rem;
+		}
+		dl{
+			position: relative;
+			background: #CA4542;
+			color: #fff;
+			padding: 5rem 6% 11rem;
+		}
+		dt{
+			font-size: 2rem;
+			font-weight: 600;
+			text-align: center;
+			margin-bottom: 3.5rem;
+		}
+		dt + dd{
+			font-weight: 500;
+			min-height: 6.9em;
+			line-height: 1.9;
+		}
+		&__price{
+			font-size: 2.3rem;
+			font-weight: 500;
+			font-family: $font_jost;
+			margin-top: 3rem;
+			text-align: center;
+			letter-spacing: .075em;
+			position: absolute;
+			bottom: 40px;
+			left: 50%;
+			transform: translateX(-50%);
+			text-align: center;
+		}
+		@include media(tablet-up){
+			display: flex;
+			justify-content: space-between;
+			dl{
+				height: 100%;
+			}
+			li{
+				width: 30%;
+			}
+		}
+
+		&__01{
+			dt + dd{
+				letter-spacing: .025em;
+			}
+		}
+	}
+}
+
+
+.soundSample{
+	margin-bottom: 9rem;
+	padding: 6rem 0 3.5rem;
+	background: #F4F4F4;
+	.studioTtl{
+		margin-bottom: 4rem;
+	}
+	&__lst{
+		margin: 0 -1.5%;
+		@media (min-width: 600px){
+			display: flex;
+			flex-wrap: wrap;
+		}
+		li{
+			padding: 0 1.5%;
+			max-width: calc(223px + 3%);
+			margin: 0 auto 2.5rem;
+			@media (min-width: 600px){
+				width: 25%;
+				margin: 0;
+				margin-bottom: 3.5rem;
+			}
+		}
+	}
+}
+.soundPlay{
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 2px 2px 3px rgba(#000,.16);
+	padding: .8rem 1rem .7rem 1.5rem;
+	position: relative;
+	&__meta{
+		padding-right: 4rem;
+	}
+	p{
+		font-weight: 500;
+	}
+	&__artist, &__genre{
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+	&__ttl{
+		font-size: 1.5rem;
+		line-height: 1.5;
+	}
+	&__genre{
+		color: #707070;
+	}
+	&__play{
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		&__btn{
+			width: 27px;
+			height: 27px;
+			background-image: url(../img/sound-make/icon_play.svg);
+			background-size: cover;
+
+			&.play{
+				background-image: url(../img/sound-make/icon_purse.svg);
+			}
+		}
+	}
+
+}
+
+
+.soundFlow{
+	margin-bottom: 7rem;
+	.studioTtl{
+		margin-bottom: 4rem;
+	}
+	&__lst{
+		position: relative;
+		@include media(tablet-up){
+			display: flex;
+		}
+
+		&:before{
+			@include media(tablet-up){
+				content: "";
+				width: 100%;
+				transform: translateX(-90%);
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+				background: #DB716F;
+			}
+		}
+
+		li{
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			color: #fff;
+			font-size: 1.8rem;
+			font-weight: 600;
+			text-align: center;
+			background: #CA4542;
+			height: 270px;
+			@include media(tablet-up){
+				font-size: 1.4vw;
+				width: 25.8%;
+				min-height: 140px;
+				flex-direction: row;
+				height: inherit;
+			}
+			@include media(desktop-up){
+				font-size: 1.6rem;
+			}
+			&:after{
+				content: "";
+				width: 100%;
+				height: 40px;
+				background-image: url(../img/sound-make/flow_bg_sp.svg);
+				background-size: 100% 100%;
+				display: block;
+
+				@include media(tablet-up){
+					width: 20%;
+					height: 100%;
+					background-image: url(../img/sound-make/flow_bg.svg);
+				}
+			}
+
+			div{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #DB716F;
+				height: 100%;
+				@include media(tablet-up){
+					width: 80%;
+				}
+			}
+
+			&:nth-child(even){
+				background: #DB716F;
+				div{
+					background: #CA4542;
+				}
+				&:after{
+					background-image: url(../img/sound-make/flow_bg_even_sp.svg);
+					@include media(tablet-up){
+						background-image: url(../img/sound-make/flow_bg_even.svg);
+					}
+				}
+			}
+			&:nth-child(1){
+				z-index: 10;
+			}
+			&:nth-child(2){
+				z-index: 9;
+			}
+			&:nth-child(3){
+				z-index: 8;
+			}
+			&:nth-child(4){
+				z-index: 7;
+			}
+			&:last-child{
+				background: transparent;
+			}
+		}
+		i{
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			font-size: 3.8rem;
+			font-family: $font_jost;
+			font-weight: 500;
+			transform: translateY(.35em);
+			@include media(tablet-up){
+				top: inherit;
+				bottom: 0;
+				left: 0;
+				font-size: 3.8vw;
+			}
+			@include media(desktop-up){
+				font-size: 3.8rem;
+			}
+		}
+		span{
+			padding-top: 5rem;
+			@include media(tablet-up){
+				margin-left: 10%;
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+
+.soundCreator{
+	margin-bottom: 10rem;
+	@include media(tablet-up){
+		margin-bottom: 13rem;
+	}
+	.studioTtl{
+		margin-bottom: 4rem;
+	}
+	&__lst{
+		@include media(tablet-up){
+			display: flex;
+			justify-content: space-between;
+		}
+		.koji a:before{
+			background-image: url(../img/sound-make/creator_01.jpg)
+		}
+		.takesy a:before{
+			background-image: url(../img/sound-make/creator_02.jpg)
+		}
+		li{
+			position: relative;
+			@include media(tablet-up){
+				width: 48%;
+			}
+			&:not(:last-child){
+				margin-bottom: 2.5rem;
+				@include media(tablet-up){
+					margin-bottom: 0;
+				}
+			}
+
+			&:before{
+				content: "";
+				padding-top: 66.666666%;
+				display: block;
+			}
+			a{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+				color: #fff;
+				font-size: 1.8rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				overflow: hidden;
+
+				&:before{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+					transition: transform .3s ease;
+				}
+				&:after{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: #000;
+					opacity: .4;
+				}
+
+				&:hover{
+					&:before{
+						transform: scale(1.2);
+					}
+				}
+			}
+			span{
+				position: relative;
+				z-index: 10;
+			}
+			i{
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+				background: url(../img/sound-make/icon_plus.svg);
+				background-size: cover;
+				width: 20px;
+				height: 20px;
+				z-index: 10;
+			}
+		}
+	}
+}
+
+.soundRelease{
+	margin-bottom: 9rem;
+	padding: 6rem 0 7rem;
+	background: #F4F4F4;
+	.studioTtl{
+		margin-bottom: 4.5rem;
+	}
+	.pc{
+		overflow: hidden;
+		display: none;
+		padding-bottom: 6rem;
+		@media(min-width: 600px){
+			display: block;
+		}
+	}
+	.sp{
+		width: 230px;
+		margin: 0 auto;
+		@media(min-width: 600px){
+			display: none;
+		}
+		.slick-dots{
+			bottom: -35px;
+		}
+	}
+	&__lst__group{
+		@media(min-width: 600px){
+			display: flex;
+			justify-content: space-between;
+			li:not(:last-child){
+				margin-right: 5%;
+			}
+		}
+	}
+	.slick-dots{
+		bottom: 10px;
+		height: 10px;
+	}
+	.slick-dots li{
+		margin: 0 2px;
+		width: 10px;
+		height: 10px;
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+	}
+	.slick-dots li button{
+		width: 10px;
+		height: 10px;
+		border: solid 1px #707070;
+		border-radius: 100%;
+		padding: 0;
+		&:before{
+			content: none;
+		}
+	}
+	.slick-active button{
+		background: #707070;
+	}
+}
+.release{
+	width: 230px !important;
+	flex-direction: column;
+	@media(min-width: 600px){
+		max-width: 230px;
+		width: auto;
+	}
+	&__meta{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: 500;
+		margin-top: .6rem;
+		margin-bottom: 1rem;
+	}
+	&__artist{
+		font-size: 1.8rem;
+		color: #CA4542;
+	}
+	&__time{
+		font-size: 1.3rem;
+		font-family: $font_jost;
+		color: #707070;
+	}
+	&__ttl{
+		text-align: center;
+		color: #463939;
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+}
+
+
+
+.popup{
+	//background: rgba(#000,.7);
+	background: #454545;
+	max-width: 980px;
+	padding: 5rem 5%;
+	margin: 0 auto;
+	position: relative;
+	box-shadow: 0 2px 15px rgba(#000,.16);
+	@include media(tablet-up){
+		padding: 4rem;
+	}
+
+	&__close{
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 10px;
+		right: 0;
+		margin-right: 4%;
+		font-size: 1.1rem;
+		font-family: $font_jost;
+		font-weight: 500;
+		color: #fff;
+		cursor: pointer;
+		@include media(tablet-up){
+			font-size: 1.3vw;
+			top: 40px;
+			right: 40px;
+			margin: 0;
+			&:hover span{
+				text-decoration: underline;
+			}
+		}
+		@include media(desktop-up){
+			font-size: 1.3rem;
+		}
+
+		i{
+			background: url(../img/sound-make/icon_close.svg);
+			background-size: cover;
+			width: 20px;
+			height: 20px;
+			@include media(tablet-up){
+				margin-right: .5rem;
+			}
+		}
+	}
+}
+
+.profile{
+	color: #fff;
+	@include media(tablet-up){
+		display: flex;
+	}
+
+	&__img{
+		width: 70%;
+		max-width: 190px;
+		flex-shrink: 0;
+		margin: 0 auto 3rem;
+		@include media(tablet-up){
+			width: 21%;
+			margin: 0;
+			margin-right: 4.4%;
+		}
+	}
+
+	&__main{
+		&__name{
+			margin-bottom: 3rem;
+			font-weight: 500;
+			color: #fff;
+			text-align: center;
+			@include media(tablet-up){
+				text-align: left;
+			}
+			span{
+				display: block;
+			}
+			.name{
+				font-size: 1.8rem;
+			}
+			.position{
+				font-size: 1.3rem;
+				font-family: $font_jost;
+			}
+			@include media(tablet-up){
+				.name{
+					font-size: 1.8vw;
+				}
+				.position{
+					font-size: 1.3vw;
+				}
+			}
+			@include media(desktop-up){
+				.name{
+					font-size: 1.8rem;
+				}
+				.position{
+					font-size: 1.3rem;
+				}
+			}
+		}
+		&__con{
+			margin-bottom: 3rem;
+			p:not(:last-child){
+				margin-bottom: 2rem;
+			}
+		}
+
+		&__sns{
+			font-size: 1.2rem;
+			font-family: $font_jost;
+			font-weight: 500;
+			@include media(tablet-up){
+				font-size: 1.3vw;
+			}
+			@include media(desktop-up){
+				font-size: 1.3rem;
+			}
+			p{
+				margin-bottom: .8rem;
+				@include media(tablet-up){
+					margin-bottom: 1rem;
+				}
+			}
+			ul{
+				display: flex;
+			}
+			li{
+				max-width: 30px;
+				&:not(:last-child){
+					margin-right: 1.5rem;
+				}
+				@include media(tablet-up){
+					max-width: 38px;
+					&:not(:last-child){
+						margin-right: 2rem;
+					}
+				}
+			}
+			a{
+				transition: opacity .3s ease;
+			}
+			a:hover{
+				opacity: .75;
+			}
+		}
+	}
+}
+
+
+.mfp-fade.mfp-bg{
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing{
+	opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content{
+	opacity: 0;
+	transition: all 0.3s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content{
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content{
+	opacity: 0;
+}

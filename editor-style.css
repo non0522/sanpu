@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+body.mceContentBody {
+  font-size: 16px;
+  font-family: 'Hiragino Sans','Hiragino Kaku Gothic ProN', "segoe ui",'游ゴシック  Medium', 'メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+  font-weight: 300;
+  margin: 30px 35px;
+}
+
+.mceContentBody {
+  width: auto;
+  max-width: 715px;
+  color: #000;
+}
+
+/* リセット */
+.mceContentBody *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mceContentBody > *:first-child{
+  margin-top: 0;
+}
+
+
+/* 段落 */
+.mceContentBody p {
+  font-size: 15px;
+  line-height: 1.8;
+  clear: both;
+  margin-bottom: 20px;
+}
+.mceContentBody p:last-child{
+  margin-bottom: 0;
+}
+
+.mceContentBody p:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+
+.mceContentBody h2,
+.mceContentBody h3{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.mceContentBody h2{
+  border-left: solid 5px #18466F;
+	padding: 13px 0 13px 20px;
+	font-size: 20px;
+}
+.mceContentBody h3{
+  border-bottom: solid 3px #18466F;
+	padding: 15px 20px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/* リンク */
+.mceContentBody a {
+  color: #457AA8;
+  text-decoration: none;
+}
+.mceContentBody a:hover {
+  text-decoration: underline;
+}
+
+
+/* 強調 */
+.mceContentBody strong {
+  font-weight: bold;
+}
+
+
+/* 斜体 */
+.mceContentBody em {
+  font-style: italic;
+}
+
+
+/* 画像 */
+.mceContentBody img{
+  max-width: 100%;
+	height: auto;
+}
+
+/* 画像配置 左 */
+.mceContentBody img.alignleft{
+  float: left;
+  margin-right: 30px;
+}
+
+/* 画像配置 中央 */
+.mceContentBody img.aligncenter{
+  margin: 1px auto;
+}
+
+/* 画像配置 右 */
+.mceContentBody img.alignright{
+  float: right;
+  margin-left: 30px;
+}
+
+
+/* 引用 */
+.mceContentBody blockquote{
+  font-size: 15px;
+  background: #f8f8f8;
+  border: solid 1px #999;
+  padding: 0 20px;
+}
+.mceContentBody blockquote p{
+  font-size: 15px;
+}
+
+
+/* リスト */
+.mceContentBody ul,
+.mceContentBody ol{
+  margin: 10px 0;
+  padding-left: calc(1em + 25px);
+}
+.mceContentBody li{
+  list-style-type: disc;
+  line-height: 2.3;
+}
+
+.mceContentBody ul li{
+  list-style-type: disc;
+}
+.mceContentBody ol li{
+  list-style: decimal;
+}
+

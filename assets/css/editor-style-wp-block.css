@@ -1,0 +1,394 @@
+/*
+Theme Name: Emanon Pro
+Description: Used to style the editor gutenberg.
+*/
+
+.edit-post-visual-editor .editor-writing-flow {
+	min-height: 60vh;
+}
+
+.editor-styles-wrapper {
+	font-family: 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'メイリオ', Sans-Serif !important;
+	color: #303030 !important;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	font-family: 'BlinkMacSystemFont', 'Hiragino Kaku Gothic ProN', 'メイリオ', Sans-Serif !important;
+	color: #303030 !important;
+	font-size: 26px !important;
+}
+
+/* メインブロック */
+.wp-block {
+	max-width: 644px;
+	box-sizing: border-box;
+	clear: both;
+}
+
+/* リンク */
+[class*="wp-block-"] > a {
+	text-decoration: none;
+}
+
+/* 区切り */
+.wp-block-separator {
+	border-top: none;
+	border-bottom: none;
+	height: 2px;
+	background-color: #e5e7e8; 
+}
+
+.wp-block-separator:not(.is-style-dots):not(.is-style-wide):not(.alignwide) {
+	left: auto;
+	width: 215px;
+}
+
+.wp-block-separator.is-style-dots {
+	height: auto;
+}
+
+/* クエリ */
+.wp-block-post-date {
+	margin: 8px 0;
+	color: #999;
+	font-size: 12px;
+}
+
+/* hタグ */
+h1.has-background,
+h2.has-background,
+h3.has-background,
+h4.has-background,
+h5.has-background,
+h6.has-background {
+	padding-right: 16px;
+	padding-left: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+/* 段落 */
+p.has-background:not([class*="is-style-paragraph__"]) {
+	padding-right: 16px;
+	padding-left: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-radius: 3px;
+}
+
+/* 表 */
+.wp-block-table {
+	margin-top: 28px;
+	margin-bottom: 28px;	
+}
+
+.wp-block-table thead {
+	background-color: #fafafa;
+	padding: 8px 12px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+	border: solid 1px #e2e5e8;
+	vertical-align: middle;
+}
+
+.wp-block-table figcaption {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	color: #303030;
+	font-size: 12px;
+}
+
+.wp-block-table__cell-content {
+	padding: 8px 16px
+}
+
+/* 引用 */
+blockquote {
+	display: block;
+	margin-bottom: 40px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-right: 32px;
+	padding-left: 32px;
+
+	border: solid 2px #b8bcc0;
+	font-size: 16px;
+}
+
+blockquote::before {
+	content: '“';
+	position: absolute;
+	top: 4px;
+	left: 10px;
+	font-size: 3em;
+	color: #828990;
+	font-family: sans-serif;
+}
+
+.wp-block-quote {
+	position: relative;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-right: 32px;
+	padding-left: 32px;
+	background-color: #fafafa;
+	border: solid 2px #b8bcc0;
+	border-radius: 3px;
+}
+
+.wp-block-quote p {
+	font-style: normal;
+}
+
+.wp-block-quote cite {
+	font-style: normal;
+	font-size: 14px;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-right: 32px;
+	padding-left: 32px;
+}
+
+.wp-block-quote.is-large p,
+.wp-block-quote.is-style-large p {
+	font-style: normal;
+	font-size: 20px;
+}
+
+/* プルクオート */
+.wp-block-pullquote {
+	position: relative;
+	padding: 0;
+	border-top:3px solid #e2e5e8;
+	border-bottom: 3px solid #e2e5e8;
+	color: #303030;
+	text-align: left;
+}
+
+.wp-block-pullquote blockquote p {
+	font-size: 16px !important;
+}
+
+.wp-block-pullquote .wp-block-pullquote__citation {
+	font-style: normal;
+	font-size: 14px;
+}
+
+.wp-block-pullquote blockquote {
+	margin: 0;
+	border: none;
+	background-color: inherit;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+	max-width: 100% !important;
+}
+
+/* File */
+.wp-block-file .wp-block-file__button {
+	padding: 8px 32px !important;
+	border-radius: 4px !important;
+	line-height: 1.5 !important;
+	border-bottom: solid 3px rgba(0, 0, 0, 0.2) !important;
+	background-color: #9b8d77 !important;
+	color: #fff !important;
+	font-size: 16px !important;
+}
+
+/* code */
+.wp-block-code {
+	padding: 24px !important;
+	background-color: #e2e5e8 !important;
+}
+
+.wp-block-code textarea {
+	background-color: #f4f6fa !important;
+}
+
+/* button */
+.is-style-outline .wp-block-button__link {
+	padding: 8px 32px;
+	border-radius: 4px;
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.is-style-squared .wp-block-button__link {
+	padding: 8px 32px;
+	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.wp-block-button__link {
+	padding: 8px 32px;
+	border-radius: 4px;
+	border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	font-size: 16px !important;
+	cursor: pointer;
+}
+
+.wp-block-button__link:hover {
+	-webkit-transform: translate(0, 3px);
+	transform: translate(0, 3px);
+	opacity: 0.8;
+}
+
+.wp-block-button.btn-mid .wp-block-button__link {
+	padding-left: 90px;
+	padding-right: 90px;
+}
+
+.wp-block-button.btn-lg .wp-block-button__link {
+	padding-left: 230px;
+	padding-right: 230px;
+	font-size: 18px !important;
+}
+
+.wp-block-paragraph {
+	line-height: 2.0 !important;
+	margin-bottom: 40px !important;
+}
+
+/* dt */
+dt {
+	padding: 8px 0;
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 0;
+	padding: 8px 0;
+}
+
+/* ol ul */
+.block-editor-block-list__block li > ul, 
+.block-editor-block-list__block li > ol {
+	margin-left: 0;
+	padding-left: 16px;
+}
+
+/* media text */
+.wp-block-media-text__content h2,
+.wp-block-media-text__content h3,
+.wp-block-media-text__content h4,
+.wp-block-media-text__content h5,
+.wp-block-media-text__content h6 {
+	margin: 0;
+}
+
+/* embed */
+.wp-block-embed {
+	margin: auto;
+	max-width: 480px;
+}
+
+/* 文字色 */
+.has-info-color {
+	color: #007bff;
+}
+
+.has-success-color {
+	color: #00c851;
+}
+
+.has-warning-color {
+	color: #dc3545;
+}
+
+.has-yellow-color {
+	color: #f0ad4e;
+}
+
+.has-orange-color {
+	color: #f2852f;
+}
+
+.has-purple-color {
+	color: #9b51e0;
+}
+
+.has-gray-color {
+	color: #e5e7e8;
+}
+
+.has-dark-gray-color {
+	color: #b8bcc0;
+}
+
+.has-light-black-color {
+	color: #484848;
+}
+
+.has-black-color {
+	color: #333333;
+}
+
+.has-white-color {
+	color: #ffffff;
+}
+
+.has-dark-white-color {
+	color: #f8f8f8;
+}
+
+/* 背景色 */
+.has-info-background-color {
+	background-color: #007bff;
+}
+
+.has-success-background-color {
+	background-color: #00c851;
+}
+
+.has-warning-background-color {
+	background-color: #dc3545;
+}
+
+.has-yellow-background-color {
+	background-color: #f0ad4e;
+}
+
+.has-orange-background-color {
+	background-color: #f2852f;
+}
+
+.has-purple-background-color {
+	background-color: #9b51e0;
+}
+
+.has-gray-background-color {
+	background-color: #e5e7e8;
+}
+
+.has-dark-gray-background-color {
+	background-color: #b8bcc0;
+}
+
+.has-light-black-background-color {
+	background-color: #484848;
+}
+
+.has-black-background-color {
+	background-color: #333333;
+}
+
+.has-white-background-color {
+	background-color: #ffffff;
+}
+
+.has-dark-white-background-color {
+	background-color: #f8f8f8;
+}

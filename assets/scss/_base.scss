@@ -1,0 +1,60 @@
+/*
+ * Base Style
+ * デフォルトスタイル及びセレクタそのものへのスタイル指定
+*/
+
+
+html {
+	font-size: 62.5%;
+	/*@include media(phone-up){
+		font-size: 39.0625%;
+	}*/
+	@include media(phone-up){
+		font-size: 0.78vw;
+	}
+	@include media(desktop-up){
+		font-size: 62.5%;
+	}
+	/*@media screen and (min-width: 1280px) {
+		font-size: 62.5%;
+	}*/
+	/*@media screen and (min-width: 1601px) {
+		font-size: 62.5%;
+	}*/
+}
+
+body{
+	font-size: 1.3rem;
+	font-family: $font;
+	font-weight: 400;
+	overflow-x: hidden;
+	color: #000;
+
+  @include media(tablet-up){
+    font-size: 1.5rem;
+  }
+  @media(min-width: 1601px){
+	  font-size: 1.6rem;
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  line-height: 1.6;
+}
+
+table,li,p,dl{
+  line-height: 1.7;
+}
+
+a{ color: #3E3A39; }
+
+img{
+	max-width: 100%;
+	//width: auto;
+	height: auto;
+	image-rendering: -webkit-optimize-contrast;
+}
+
+i{
+	font-style: normal;
+}

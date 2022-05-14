@@ -1,0 +1,73 @@
+/* Animation */
+
+@-webkit-keyframes loadLogo {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes logoFade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@include media(phone-up){
+	@-webkit-keyframes loadLogo {
+		0% {
+			opacity: 0;
+			transform: translateY(-30%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(-40%);
+		}
+	}
+	@keyframes logoFade {
+		0% {
+			opacity: 0;
+			transform: translateY(-30%);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(-40%);
+		}
+	}
+}
+.loadLogo {
+	-webkit-animation-name: loadLogo;
+	animation-name: loadLogo;
+	animation-delay: .8s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+@-webkit-keyframes loadBg {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes loadBg {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.loadBg{
+	-webkit-animation-name: loadBg;
+	animation-name: loadBg;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}

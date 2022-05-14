@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+@import "lib/_mixin"; // mixinを記述
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap');
+
+body.mceContentBody {
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'Noto Serif JP', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    font-weight: 400;
+    width: auto;
+    max-width: 740px;
+    margin: 40px auto;
+    color: #393939;
+    font-size: 13px;
+    @media(min-width: 768px){
+        font-size: 1.5vw;
+    }
+    @media(min-width: 1020px){
+        font-size: 15px;
+    }
+
+    // ResetStyle
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    & > *:first-child {
+        margin-top: 0;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        line-height: 1.6;
+    }
+
+    table,li,p,dl{
+        line-height: 1.7;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+    // 段落
+    p {
+        line-height: 2.3;
+        color: #393939;
+        margin-bottom: 30px;
+        &:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+    }
+
+    // 見出し
+    h2 {
+        font-size: 15px;
+		border-bottom: solid 1px #000;
+		padding: 0 2px 4px;
+		margin-top: 30px;
+		margin-bottom: 12px;
+		line-height: 2.2;
+		@include media(phone-up){
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+    }
+    h3 {
+        font-size: 14px;
+		margin-top: 30px;
+		line-height: 2.2;
+		@include media(phone-up){
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+    }
+
+    // リンク
+    a {
+        text-decoration: underline;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    //文章装飾
+    strong {
+        font-weight: bold;
+    }
+    em {
+        font-style: italic;
+    }
+
+    // 引用
+	blockquote{
+		background: #f8f8f8;
+		border: solid 1px #aaa;
+		padding: 30px 20px 0;
+		margin-bottom: 30px;
+		@include media(phone-up){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+
+    // リスト
+    ul, ol{
+        margin-bottom: 30px;
+        padding-left: 1em;
+    }
+    ul{
+        list-style: disc;
+    }
+
+    // 画像
+    img{
+        display: block;
+    }
+    img.alignleft{
+        @include media(phone-up){
+            float: left;
+            margin-right: 20px;
+            max-width: 32%;
+        }
+    }
+    img.alignright{
+        @include media(phone-up){
+            float: right;
+            margin-left: 20px;
+            max-width: 32%;
+        }
+    }
+    img.aligncenter{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // 線
+	hr{
+		border-top: dashed 1px #393939;
+		margin-bottom: 38px;
+	}
+
+    // ------ Text Align ------
+    .text-center {
+        text-align: center;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+}

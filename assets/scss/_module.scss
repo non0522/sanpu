@@ -1,0 +1,50 @@
+/*
+ * Module
+ * 再利用可能なパーツ（BEMの命名規則は適用しない）
+*/
+
+
+
+// セクション
+.m__section{
+	margin-bottom: 4rem;
+	@include media(tablet-up){
+		margin-bottom: 6rem;
+	}
+}
+
+// タイトル
+.m__ttl{
+	font-family: $font_jost;
+	font-size: 2rem;
+	letter-spacing: .075em;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: #CA4542;
+	@include media(tablet-up){
+		font-size: 2.6vw;
+	}
+	@include media(desktop-up){
+		font-size: 2.6rem;
+	}
+}
+
+.m__subttl{
+	font-weight: 500;
+	margin-top: 2rem;
+	line-height: 1.8;
+	@include media(tablet-up){
+		font-size: 1.6rem;
+	}
+}
+
+@include media(desktop-up){
+    .pc__hide{
+        display: none;
+    }
+}
+@include media(tablet-down){
+	.sp__hide{
+		display: none;
+	}
+}
